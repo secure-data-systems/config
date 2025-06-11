@@ -1,7 +1,6 @@
 {
 	"$schema": "https://turbo.build/schema.json",
 	"ui": "tui",
-	"globalDependencies": ["./config/typescript-config/tsconfig.build.json"],
 	"tasks": {
 		"build": {
 			"dependsOn": ["lint", "^build"],

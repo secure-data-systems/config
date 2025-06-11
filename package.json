@@ -4,12 +4,13 @@
 	"scripts": {
 		"build": "turbo run build",
 		"clean": "node scripts/clean.mjs",
-		"deploy": "npm run deploy:eslint-config && npm run deploy:tsconfig",
+		"deploy": "npm run deploy:tsconfig && npm run deploy:eslint-config",
 		"deploy:eslint-config": "cd packages/eslint-config && npm run deploy",
 		"deploy:tsconfig": "cd packages/tsconfig && npm run deploy"
 	},
 	"devDependencies": {
 		"@types/node": "catalog:node",
+		"tsx": "catalog:",
 		"turbo": "catalog:",
 		"typescript": "catalog:"
 	}
