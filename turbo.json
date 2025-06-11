@@ -8,9 +8,6 @@
 			"inputs": ["$TURBO_DEFAULT$", ".env*"],
 			"outputs": ["dist/**"]
 		},
-		"deploy": {
-			"dependsOn": ["build"]
-		},
     "lint": {
       "dependsOn": [],
       "outputs": []
@@ -18,11 +15,6 @@
     "lint:fix": {
       "dependsOn": [],
       "outputs": []
-    },
-		"start": {
-			"dependsOn": ["build"],
-			"cache": false,
-			"persistent": true
-		}
+    }
 	}
 }

@@ -1,0 +1,19 @@
+{
+	"name": "@securedatasystems/tsconfig",
+	"version": "1.0.0",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"./package.json",
+		"./README.md",
+		"./tsconfig.build.json",
+		"./tsconfig.json"
+	],
+	"scripts": {
+		"build": "node ../../scripts/build.mjs && tsc --project tsconfig.build.json",
+		"clean": "rm -rf ./dist",
+		"deploy": "npm run build && node ../../scripts/publish.mjs"
+	}
+}

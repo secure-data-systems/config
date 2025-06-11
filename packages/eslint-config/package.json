@@ -1,7 +1,6 @@
 {
 	"name": "@securedatasystems/eslint-config",
 	"version": "1.0.0",
-	"private": true,
 	"license": "MIT",
 	"type": "module",
 	"main": "./dist/index.js",
@@ -26,9 +25,9 @@
 		"./README.md"
 	],
 	"scripts": {
-		"build":  "node ../../scripts/build.mjs && tsc --project tsconfig.build.json",
+		"build": "node ../../scripts/build.mjs && tsc --project tsconfig.build.json",
 		"clean": "rm -rf ./dist",
-		"deploy": "npm publish"
+		"deploy": "npm run build && node ../../scripts/publish.mjs"
 	},
 	"dependencies": {
 		"@eslint/eslintrc": "catalog:eslint",
