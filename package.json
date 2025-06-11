@@ -1,0 +1,14 @@
+{
+	"name": "@securedatasystems/config",
+	"packageManager": "pnpm@9.7.0",
+	"scripts": {
+		"build": "turbo run build",
+		"clean": "node scripts/clean.mjs",
+		"deploy": "npm run build && cd apps/server && npm run deploy"
+	},
+	"devDependencies": {
+		"@types/node": "catalog:node",
+		"turbo": "catalog:",
+		"typescript": "catalog:"
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"name": "@securedatasystems/eslint-config",
+	"version": "1.0.0",
+	"private": true,
+	"license": "MIT",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"import": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"require": "./dist/index.cjs"
+			}
+		}
+	},
+	"files": [
+		"./dist/index.d.ts",
+		"./dist/index.js",
+		"./package.json",
+		"./README.md"
+	],
+	"scripts": {
+		"build":  "node ../../scripts/build.mjs && tsc --project tsconfig.build.json",
+		"clean": "rm -rf ./dist",
+		"deploy": "npm publish"
+	},
+	"dependencies": {
+		"@eslint/eslintrc": "catalog:eslint",
+		"@stylistic/eslint-plugin": "catalog:eslint",
+		"@securedatasystems/typescript-config": "workspace:^",
+		"@types/eslint__eslintrc": "catalog:eslint",
+		"eslint": "catalog:eslint",
+		"eslint-plugin-perfectionist": "catalog:eslint",
+		"globals": "catalog:eslint",
+		"typescript-eslint": "catalog:eslint"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
