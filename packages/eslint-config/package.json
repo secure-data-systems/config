@@ -19,8 +19,8 @@
 		}
 	},
 	"files": [
-		"./dist/index.d.ts",
-		"./dist/index.js",
+		"./dist",
+		"./LICENSE",
 		"./package.json",
 		"./README.md"
 	],

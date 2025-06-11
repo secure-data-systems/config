@@ -6,6 +6,7 @@
 		"access": "public"
 	},
 	"files": [
+		"./LICENSE",
 		"./package.json",
 		"./README.md",
 		"./tsconfig.build.json",
