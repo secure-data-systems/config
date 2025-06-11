@@ -1,6 +1,6 @@
 {
 	"name": "@securedatasystems/eslint-config",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "MIT",
 	"type": "module",
 	"main": "./dist/index.js",
@@ -32,7 +32,6 @@
 		"@eslint/eslintrc": "catalog:eslint",
 		"@stylistic/eslint-plugin": "catalog:eslint",
 		"@securedatasystems/tsconfig": "workspace:^",
-		"@types/eslint__eslintrc": "catalog:eslint",
 		"eslint": "catalog:eslint",
 		"eslint-plugin-perfectionist": "catalog:eslint",
 		"globals": "catalog:eslint",

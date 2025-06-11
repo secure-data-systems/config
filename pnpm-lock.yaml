@@ -22,9 +22,6 @@ catalogs:
     '@stylistic/eslint-plugin':
       specifier: ^4.4.1
       version: 4.4.1
-    '@types/eslint__eslintrc':
-      specifier: ^3.3.0
-      version: 3.3.0
     eslint:
       specifier: ^9.28.0
       version: 9.28.0
@@ -70,9 +67,6 @@ importers:
       '@stylistic/eslint-plugin':
         specifier: catalog:eslint
         version: 4.4.1(eslint@9.28.0)(typescript@5.8.3)
-      '@types/eslint__eslintrc':
-        specifier: catalog:eslint
-        version: 3.3.0
       eslint:
         specifier: catalog:eslint
         version: 9.28.0
@@ -315,10 +309,6 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=9.0.0'
-
-  '@types/eslint__eslintrc@3.3.0':
-    resolution: {integrity: sha512-u9C5PHo8zhLBTEpWAV1YsP3ijj3GjM+4r2aGLbkT+vqtBubwgSI8KiRHXtC2QcxDGR0qM3Qapg7OtTB58JmoYQ==}
-    deprecated: This is a stub types definition. @eslint/eslintrc provides its own type definitions, so you do not need this installed.
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -980,12 +970,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  '@types/eslint__eslintrc@3.3.0':
-    dependencies:
-      '@eslint/eslintrc': 3.3.1
-    transitivePeerDependencies:
-      - supports-color
 
   '@types/estree@1.0.8': {}
 
