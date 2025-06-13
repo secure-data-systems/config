@@ -1,18 +1,18 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
-		"noImplicitAny": true,
-		"module": "nodenext",
-		"target": "esnext",
-		"declaration": true,
 		"allowSyntheticDefaultImports": true,
-		"moduleResolution": "nodenext",
-		"resolveJsonModule": true,
+		"baseUrl": ".",
+		"declaration": true,
 		"esModuleInterop": true,
-		"strictNullChecks": true,
 		"lib": ["ES2020", "DOM"],
-		"types": ["node"],
-		"baseUrl": "."
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"strictNullChecks": true,
+		"target": "esnext",
+		"types": ["node"]
 	},
 	"exclude": ["test.js", "dist", "**/*.spec.ts", "test"]
 }
