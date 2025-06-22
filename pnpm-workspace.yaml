@@ -2,7 +2,7 @@ packages:
   - 'packages/*'
 
 catalog:
-  tsx:  4.20.0
+  tsx:  ^4.20.3
   turbo: ^2.5.4
   typescript: ^5.8.3
 
@@ -10,14 +10,14 @@ catalogs:
   eslint:
     "@eslint/eslintrc": 3.3.1
     "@stylistic/eslint-plugin": ^4.4.1
-    eslint-plugin-perfectionist: ^4.14.0
+    eslint-plugin-perfectionist: ^4.15.0
     globals: ^16.2.0
-    typescript-eslint: ^8.34.0
-    eslint: ^9.28.0
+    typescript-eslint: ^8.34.1
+    eslint: ^9.29.0
 
   minimist:
     "@types/minimist": ^1.2.5
     minimist: ^1.2.8
 
   node:
-    "@types/node": ^24.0.0
+    "@types/node": ^24.0.3

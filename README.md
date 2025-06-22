@@ -1,4 +1,4 @@
-# @securedatasystems/config
+# @secure-data-systems/config
 
 > 🛠 Unified configuration package for all SecureDataSystems projects
 

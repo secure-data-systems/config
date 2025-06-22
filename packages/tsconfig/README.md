@@ -1,4 +1,4 @@
-# @securedatasystems/tsconfig
+# @secure-data-systems/tsconfig
 
 > 🔐 Official TypeScript configuration for SecureDataSystems projects
 
@@ -17,4 +17,4 @@ This package provides a shareable `tsconfig.json` base configuration to standard
 Using **npm**:
 
 ```bash
-npm add -D typescript @securedatasystems/tsconfig
+npm add -D typescript @secure-data-systems/tsconfig

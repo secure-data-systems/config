@@ -1,5 +1,5 @@
 {
-	"name": "@securedatasystems/eslint-config",
+	"name": "@secure-data-systems/eslint-config",
 	"version": "1.0.2",
 	"license": "MIT",
 	"type": "module",
@@ -31,7 +31,7 @@
 	"dependencies": {
 		"@eslint/eslintrc": "catalog:eslint",
 		"@stylistic/eslint-plugin": "catalog:eslint",
-		"@securedatasystems/tsconfig": "workspace:^",
+		"@secure-data-systems/tsconfig": "workspace:^",
 		"eslint": "catalog:eslint",
 		"eslint-plugin-perfectionist": "catalog:eslint",
 		"globals": "catalog:eslint",
