@@ -61,8 +61,9 @@ export default {
 								'declare-function',
 								['declare-class', 'declare-interface', 'declare-type'],
 								['export-enum', 'enum'],
+								['export-interface', 'export-type', 'interface', 'type'],
 								['export-function', 'function'],
-								['class', 'export-class', 'export-interface', 'export-type', 'interface', 'type']
+								['class', 'export-class']
 							]
 						}
 					],
