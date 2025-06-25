@@ -83,6 +83,7 @@ export default {
 						}
 					],
 					'@stylistic/indent-binary-ops': ['error', 'tab'],
+					'@stylistic/operator-linebreak': ["error", "before", { "overrides": { "=": "after", "+=": "after", "-=": "after" } }],
 					'@stylistic/member-delimiter-style': [
 						'error',
 						{
