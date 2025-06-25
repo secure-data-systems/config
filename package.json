@@ -1,6 +1,10 @@
 {
 	"name": "@secure-data-systems/config",
 	"packageManager": "pnpm@9.7.0",
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/secure-data-systems/config.git"
+  },
 	"scripts": {
 		"build": "turbo run build",
 		"clean": "node scripts/clean.mjs",
