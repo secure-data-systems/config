@@ -51,15 +51,22 @@ export default {
 							]
 						}
 					],
-					'perfectionist/sort-intersection-types': 'off',
-					'perfectionist/sort-types': [
+					'perfectionist/sort-modules': [
 						'error',
 						{
 							order: 'asc',
 							type: 'natural',
-							exported: 'any'
+							groups: [
+								'declare-enum',
+								'declare-function',
+								['declare-class', 'declare-interface', 'declare-type'],
+								['export-enum', 'enum'],
+								['export-function', 'function'],
+								['class', 'export-class', 'export-interface', 'export-type', 'interface', 'type']
+							]
 						}
 					],
+					'perfectionist/sort-intersection-types': 'off',
 					'@stylistic/block-spacing': 'error',
 					'@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
 					'@stylistic/comma-dangle': ['error', 'never'],
