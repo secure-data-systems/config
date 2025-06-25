@@ -52,6 +52,14 @@ export default {
 						}
 					],
 					'perfectionist/sort-intersection-types': 'off',
+					'perfectionist/sort-types': [
+						'error',
+						{
+							order: 'asc',
+							type: 'natural',
+							exported: 'any'
+						}
+					],
 					'@stylistic/block-spacing': 'error',
 					'@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
 					'@stylistic/comma-dangle': ['error', 'never'],
