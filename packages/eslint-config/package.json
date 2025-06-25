@@ -2,6 +2,10 @@
 	"name": "@secure-data-systems/eslint-config",
 	"version": "1.0.3",
 	"license": "MIT",
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/secure-data-systems/config.git"
+  },
 	"type": "module",
 	"main": "./dist/index.js",
 	"module": "./dist/index.js",
