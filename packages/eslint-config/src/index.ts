@@ -110,7 +110,7 @@ export default {
 					'@typescript-eslint/no-explicit-any': ['off'],
 					'@typescript-eslint/no-restricted-types': 'warn',
 					'@typescript-eslint/no-unused-vars': ['warn', { 'caughtErrors': 'none', 'ignoreRestSiblings': true }],
-					"@typescript-eslint/no-unnecessary-condition": "error",
+					"@typescript-eslint/no-unnecessary-condition": ["error", { allowConstantLoopConditions: 'only-allowed-literals' } ],
 					'@typescript-eslint/naming-convention': [
 						'error',
 						{
