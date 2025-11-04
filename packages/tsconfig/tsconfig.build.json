@@ -9,6 +9,7 @@
 		"module": "nodenext",
 		"moduleResolution": "nodenext",
 		"noImplicitAny": true,
+		"noUncheckedIndexedAccess": true,
 		"resolveJsonModule": true,
 		"strictNullChecks": true,
 		"target": "esnext",
