@@ -30,7 +30,8 @@ export default {
 			{
 				rules: {
 					'no-debugger': 'warn',
-					'no-empty-pattern': ["error", { "allowObjectPatternsAsParameters": true }],
+					'no-empty': ['error', { 'allowEmptyCatch': true }],
+					'no-empty-pattern': ['error', { 'allowObjectPatternsAsParameters': true }],
 					'no-throw-literal': 'error',
 					'prefer-const': ['error', { destructuring: 'all' }],
 					'prefer-rest-params': 'off',
