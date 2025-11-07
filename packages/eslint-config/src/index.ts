@@ -104,7 +104,7 @@ export default {
 					'@stylistic/no-trailing-spaces': 'error',
 					'@stylistic/no-whitespace-before-property': 'error',
 					'@stylistic/quote-props': ['error', 'consistent'],
-					'@stylistic/quotes': ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
+					'@stylistic/quotes': ['error', 'single', { allowTemplateLiterals: "always", avoidEscape: true }],
 					'@stylistic/semi-spacing': 'error',
 					'@stylistic/semi': ['error', 'always'],
 					'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
