@@ -133,7 +133,7 @@ export default {
 								regex: '^(changed|done|found|result|retry|waiting|(.+)Changed|(.+)Updated)$',
 								match: false
 							},
-							prefix: ['bool', 'can', 'did', 'has', 'is', 'should', 'use', 'was', 'will']
+							prefix: ['bool', 'can', 'CAN', 'did', 'DID', 'has', 'HAS', 'is', 'IS', 'should', 'SHOULD', 'use', 'USE', 'was', 'WAS', 'will', 'WILL']
 						},
 						{
 							selector: 'variable',
