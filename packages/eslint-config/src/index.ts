@@ -158,8 +158,12 @@ export default {
 							suffix: ['Changed', 'Updated']
 						},
 						{
-							"selector": "variable",
-							"format": ["strictCamelCase"]
+							selector: "variable",
+							format: ["strictCamelCase"],
+							filter: {
+								regex: '^_$',
+								match: false
+							},
 						},
 						{
 							selector: ['class', 'enum', 'interface', 'typeAlias'],
