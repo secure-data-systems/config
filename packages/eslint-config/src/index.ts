@@ -116,6 +116,7 @@ export default {
 						{
 							caughtErrors: 'none',
 							ignoreRestSiblings: true,
+
 							varsIgnorePattern: '^_$',
 							argsIgnorePattern: '^_$',
 							caughtErrorsIgnorePattern: '^_$'
@@ -127,6 +128,7 @@ export default {
 						{
 							selector: 'variable',
 							types: ['boolean'],
+							format: null,
 							filter: {
 								regex: '^(changed|done|found|result|retry|waiting|(.+)Changed|(.+)Updated)$',
 								match: false
