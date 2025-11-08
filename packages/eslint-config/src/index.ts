@@ -127,6 +127,18 @@ export default {
 						'error',
 						{
 							selector: 'variable',
+							types: ['function'],
+							modifiers: ['exported', 'global'],
+							format: ['StrictPascalCase']
+						},
+						{
+							selector: 'variable',
+							types: ['array', 'boolean', 'number', 'string'],
+							modifiers: ['global'],
+							format: ['UPPER_CASE']
+						},
+						{
+							selector: 'variable',
 							types: ['boolean'],
 							format: null,
 							filter: {
@@ -146,16 +158,8 @@ export default {
 							suffix: ['Changed', 'Updated']
 						},
 						{
-							selector: 'variable',
-							types: ['function'],
-							modifiers: ['exported', 'global'],
-							format: ['StrictPascalCase']
-						},
-						{
-							selector: 'variable',
-							types: ['array', 'boolean', 'number', 'string'],
-							modifiers: ['exported', 'global'],
-							format: ['UPPER_CASE']
+							"selector": "variable",
+							"format": ["strictCamelCase"]
 						},
 						{
 							selector: ['class', 'enum', 'interface', 'typeAlias'],
