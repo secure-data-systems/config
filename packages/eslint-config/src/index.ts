@@ -127,15 +127,14 @@ export default {
 						'error',
 						{
 							selector: 'variable',
-							types: ['function', 'object'],
-							modifiers: ['exported', 'global'],
-							format: ['StrictPascalCase']
-						},
-						{
-							selector: 'variable',
 							types: ['array', 'boolean', 'number', 'string'],
 							modifiers: ['exported', 'global'],
 							format: ['UPPER_CASE']
+						},
+						{
+							selector: 'variable',
+							modifiers: ['exported', 'global'],
+							format: ['StrictPascalCase']
 						},
 						{
 							selector: 'variable',
