@@ -128,12 +128,16 @@ export default {
 						{
 							selector: ['function'],
 							modifiers: ['exported'],
-							format: ['StrictPascalCase'],
+							format: ['strictCamelCase']
 						},
 						{
 							selector: ['variable'],
 							modifiers: ['exported'],
 							format: ['StrictPascalCase'],
+							filter: {
+								regex: '^_$',
+								match: false
+							}
 						},
 						{
 							selector: 'variable',
@@ -167,7 +171,7 @@ export default {
 							filter: {
 								regex: '^_$',
 								match: false
-							},
+							}
 						},
 						{
 							selector: ['class', 'enum', 'interface', 'typeAlias'],
