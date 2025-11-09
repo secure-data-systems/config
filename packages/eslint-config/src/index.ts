@@ -126,51 +126,73 @@ export default {
 					'@typescript-eslint/naming-convention': [
 						'error',
 						{
-							selector: ['function'],
-							modifiers: ['exported'],
-							format: ['strictCamelCase']
+							"selector": ["function"],
+							"modifiers": ["exported"],
+							"format": ["strictCamelCase"]
 						},
 						{
-							selector: ['variable'],
-							modifiers: ['exported'],
-							format: ['StrictPascalCase'],
-							filter: {
-								regex: '^_$',
-								match: false
+							"selector": ["variable"],
+							"types": ["array", "boolean", "number", "string"],
+							"modifiers": ["exported"],
+							"format": ["UPPER_CASE"],
+							"filter": {
+								"regex": "^_$",
+								"match": false
 							}
 						},
 						{
-							selector: 'variable',
-							types: ['array', 'boolean', 'number', 'string'],
-							modifiers: ['exported', 'global'],
-							format: ['UPPER_CASE']
+							"selector": ["variable"],
+							"types": ["array", "boolean", "number", "string"],
+							"modifiers": ["global"],
+							"format": ["UPPER_CASE"],
+							"filter": {
+								"regex": "^_$",
+								"match": false
+							}
+						},      {
+							"selector": ["variable"],
+							"modifiers": ["exported"],
+							"format": ["StrictPascalCase"],
+							"filter": {
+								"regex": "^_$",
+								"match": false
+							}
 						},
 						{
-							selector: 'variable',
-							types: ['boolean'],
-							format: null,
-							filter: {
-								regex: '^(changed|done|found|result|retry|waiting|(.+)Changed|(.+)Updated)$',
-								match: false
+							"selector": ["variable"],
+							"modifiers": ["global"],
+							"format": ["StrictPascalCase"],
+							"filter": {
+								"regex": "^_$",
+								"match": false
+							}
+						},
+						{
+							"selector": "variable",
+							"types": ["boolean"],
+							"format": null,
+							"filter": {
+								"regex": "^(changed|done|found|result|retry|waiting|(.+)Changed|(.+)Updated)$",
+								"match": false
 							},
-							prefix: ['bool', 'can', 'CAN', 'did', 'DID', 'has', 'HAS', 'is', 'IS', 'should', 'SHOULD', 'use', 'USE', 'was', 'WAS', 'will', 'WILL']
+							"prefix": ["bool", "can", "did", "has", "is", "should", "use", "was", "will"]
 						},
 						{
-							selector: 'variable',
-							types: ['boolean'],
-							format: ['strictCamelCase'],
-							filter: {
-								regex: '^((.+)Changed|(.+)Updated)$',
-								match: true
+							"selector": "variable",
+							"types": ["boolean"],
+							"format": ["strictCamelCase"],
+							"filter": {
+								"regex": "^((.+)Changed|(.+)Updated)$",
+								"match": true
 							},
-							suffix: ['Changed', 'Updated']
+							"suffix": ["Changed", "Updated"]
 						},
 						{
-							selector: "variable",
-							format: ["strictCamelCase"],
-							filter: {
-								regex: '^_$',
-								match: false
+							"selector": "variable",
+							"format": ["strictCamelCase"],
+							"filter": {
+								"regex": "^_$",
+								"match": false
 							}
 						},
 						{
