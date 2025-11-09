@@ -127,7 +127,7 @@ export default {
 						'error',
 						{
 							selector: 'variable',
-							types: ['function'],
+							types: ['function', 'object'],
 							modifiers: ['exported', 'global'],
 							format: ['StrictPascalCase']
 						},
