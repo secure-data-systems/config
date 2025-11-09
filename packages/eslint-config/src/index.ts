@@ -134,7 +134,7 @@ export default {
 						{
 							selector: 'variable',
 							types: ['array', 'boolean', 'number', 'string'],
-							modifiers: ['global'],
+							modifiers: ['exported', 'global'],
 							format: ['UPPER_CASE']
 						},
 						{
