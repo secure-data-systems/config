@@ -126,7 +126,12 @@ export default {
 					'@typescript-eslint/naming-convention': [
 						'error',
 						{
-							selector: ['variable', 'function'],
+							selector: ['function'],
+							modifiers: ['exported'],
+							format: ['StrictPascalCase'],
+						},
+						{
+							selector: ['variable'],
 							modifiers: ['exported'],
 							format: ['StrictPascalCase'],
 						},
