@@ -161,6 +161,16 @@ export default {
 						{
 							"selector": ["variable"],
 							"modifiers": ["global"],
+							"types": ["function"],
+							"format": ["strictCamelCase"],
+							"filter": {
+								"regex": "^_$",
+								"match": false
+							}
+						},
+						{
+							"selector": ["variable"],
+							"modifiers": ["global"],
 							"format": ["StrictPascalCase"],
 							"filter": {
 								"regex": "^_$",
