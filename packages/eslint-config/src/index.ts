@@ -191,7 +191,7 @@ export default {
 							"selector": "variable",
 							"format": ["strictCamelCase"],
 							"filter": {
-								"regex": "^_$",
+								"regex": "^_(id)?$",
 								"match": false
 							}
 						},
