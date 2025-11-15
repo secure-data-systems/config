@@ -260,9 +260,7 @@ export default {
 			{
 				files: ['**/*.{jsx,tsx}'],
 				rules: {
-					'@typescript-eslint/naming-convention': createNamingConventions(true),
-          'react/jsx-uses-react': 'error',
-          'react/jsx-uses-vars': 'error'
+					'@typescript-eslint/naming-convention': createNamingConventions(true)
 				}
 			}
 		] as Linter.Config
