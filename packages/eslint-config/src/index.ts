@@ -260,6 +260,7 @@ export default {
 			{
 				files: ['**/*.{jsx,tsx}'],
 				rules: {
+					'@stylistic/jsx-indent-props': ["error", "tab"],
 					'@typescript-eslint/naming-convention': createNamingConventions(true)
 				}
 			}
