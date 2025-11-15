@@ -1,6 +1,6 @@
 {
 	"name": "@secure-data-systems/eslint-config",
-	"version": "1.0.27",
+	"version": "1.0.28",
 	"license": "MIT",
 	"repository": {
     "type": "git",
@@ -38,6 +38,7 @@
 		"@secure-data-systems/tsconfig": "workspace:^",
 		"eslint": "catalog:eslint",
 		"eslint-plugin-perfectionist": "catalog:eslint",
+		"eslint-plugin-react": "catalog:eslint",
 		"globals": "catalog:eslint",
 		"typescript-eslint": "catalog:eslint"
 	},
