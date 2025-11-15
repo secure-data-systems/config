@@ -9,17 +9,142 @@ import type { Linter } from 'eslint';
 
 const compat = new FlatCompat({});
 
+function createNamingConventions(allowPascalFn: boolean) {
+	return [
+		'error',
+		{
+			"selector": ["function"],
+			"modifiers": ["exported"],
+			"format": allowPascalFn ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"]
+		},
+		{
+			"selector": ["variable"],
+			"types": ["array", "boolean", "number", "string"],
+			"modifiers": ["exported"],
+			"format": ["UPPER_CASE"],
+			"filter": {
+				"regex": "^_$",
+				"match": false
+			}
+		},
+		{
+			"selector": ["variable"],
+			"types": ["array", "boolean", "number", "string"],
+			"modifiers": ["global"],
+			"format": ["UPPER_CASE"],
+			"filter": {
+				"regex": "^_$",
+				"match": false
+			}
+		},
+		{
+			"selector": ["variable"],
+			"modifiers": ["exported"],
+			"format": ["StrictPascalCase"],
+			"filter": {
+				"regex": "^_$",
+				"match": false
+			}
+		},
+		{
+			"selector": ["variable"],
+			"modifiers": ["global"],
+			"types": ["function"],
+			"format": allowPascalFn ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"],
+			"filter": {
+				"regex": "^_$",
+				"match": false
+			}
+		},
+		{
+			"selector": ["variable"],
+			"modifiers": ["global"],
+			"format": ["StrictPascalCase"],
+			"filter": {
+				"regex": "^_$",
+				"match": false
+			}
+		},
+		{
+			"selector": "variable",
+			"types": ["boolean"],
+			"format": null,
+			"filter": {
+				"regex": "^(changed|done|found|result|retry|waiting|(.+)Changed|(.+)Updated)$",
+				"match": false
+			},
+			"prefix": ["bool", "can", "did", "has", "is", "should", "use", "was", "will"]
+		},
+		{
+			"selector": "variable",
+			"types": ["boolean"],
+			"format": ["strictCamelCase"],
+			"filter": {
+				"regex": "^((.+)Changed|(.+)Updated)$",
+				"match": true
+			},
+			"suffix": ["Changed", "Updated"]
+		},
+		{
+			"selector": "variable",
+			"format": ["strictCamelCase"],
+			"filter": {
+				"regex": "^_(id)?$",
+				"match": false
+			}
+		},
+		{
+			selector: ['class', 'enum', 'interface', 'typeAlias'],
+			format: ['StrictPascalCase']
+		},
+		{
+			selector: 'typeParameter',
+			format: ['StrictPascalCase'],
+			filter: {
+				regex: '^(T|U|V)$',
+				match: false
+			},
+			prefix: ['T']
+		},
+		{
+			selector: 'classProperty',
+			modifiers: ['private'],
+			leadingUnderscore: 'require',
+			format: ['strictCamelCase']
+		},
+		{
+			selector: 'classProperty',
+			modifiers: ['public'],
+			leadingUnderscore: 'forbid',
+			filter: {
+				regex: '^(_id)$',
+				match: false
+			},
+			format: ['strictCamelCase']
+		},
+		{
+			selector: 'classMethod',
+			filter: {
+				regex: '^(toJSON)$',
+				match: false
+			},
+			format: ['strictCamelCase']
+		}
+	];
+}
+
 export default {
 	configs: {
 		flat: [
 			{
-				files: ['**/*.{js,mjs,cjs,ts,mts}'],
+				files: ['**/*.{js,mjs,cjs,ts,mts,jsx,tsx}'],
 				languageOptions: {
 					globals: globals.node,
 					parser: tsParser,
 					parserOptions: {
 						projectService: true,
 						tsconfigRootDir: import.meta.dirname,
+						ecmaFeatures: { jsx: true }
 					}					
 				}
 			},
@@ -28,6 +153,7 @@ export default {
 			perfectionist.configs['recommended-natural'],
 			...tseslint.configs.recommended,
 			{
+				files: ['**/*.{js,mjs,cjs,ts,mts,jsx,tsx}'],
 				rules: {
 					'no-debugger': 'warn',
 					'no-empty': ['error', { 'allowEmptyCatch': true }],
@@ -122,127 +248,21 @@ export default {
 							caughtErrorsIgnorePattern: '^_$'
 						}
 					],
-					"@typescript-eslint/no-unnecessary-condition": ["error", { allowConstantLoopConditions: 'only-allowed-literals' } ],
-					'@typescript-eslint/naming-convention': [
-						'error',
-						{
-							"selector": ["function"],
-							"modifiers": ["exported"],
-							"format": ["strictCamelCase"]
-						},
-						{
-							"selector": ["variable"],
-							"types": ["array", "boolean", "number", "string"],
-							"modifiers": ["exported"],
-							"format": ["UPPER_CASE"],
-							"filter": {
-								"regex": "^_$",
-								"match": false
-							}
-						},
-						{
-							"selector": ["variable"],
-							"types": ["array", "boolean", "number", "string"],
-							"modifiers": ["global"],
-							"format": ["UPPER_CASE"],
-							"filter": {
-								"regex": "^_$",
-								"match": false
-							}
-						},      {
-							"selector": ["variable"],
-							"modifiers": ["exported"],
-							"format": ["StrictPascalCase"],
-							"filter": {
-								"regex": "^_$",
-								"match": false
-							}
-						},
-						{
-							"selector": ["variable"],
-							"modifiers": ["global"],
-							"types": ["function"],
-							"format": ["strictCamelCase"],
-							"filter": {
-								"regex": "^_$",
-								"match": false
-							}
-						},
-						{
-							"selector": ["variable"],
-							"modifiers": ["global"],
-							"format": ["StrictPascalCase"],
-							"filter": {
-								"regex": "^_$",
-								"match": false
-							}
-						},
-						{
-							"selector": "variable",
-							"types": ["boolean"],
-							"format": null,
-							"filter": {
-								"regex": "^(changed|done|found|result|retry|waiting|(.+)Changed|(.+)Updated)$",
-								"match": false
-							},
-							"prefix": ["bool", "can", "did", "has", "is", "should", "use", "was", "will"]
-						},
-						{
-							"selector": "variable",
-							"types": ["boolean"],
-							"format": ["strictCamelCase"],
-							"filter": {
-								"regex": "^((.+)Changed|(.+)Updated)$",
-								"match": true
-							},
-							"suffix": ["Changed", "Updated"]
-						},
-						{
-							"selector": "variable",
-							"format": ["strictCamelCase"],
-							"filter": {
-								"regex": "^_(id)?$",
-								"match": false
-							}
-						},
-						{
-							selector: ['class', 'enum', 'interface', 'typeAlias'],
-							format: ['StrictPascalCase']
-						},
-						{
-							selector: 'typeParameter',
-							format: ['StrictPascalCase'],
-							filter: {
-								regex: '^(T|U|V)$',
-								match: false
-							},
-							prefix: ['T']
-						},
-						{
-							selector: 'classProperty',
-							modifiers: ['private'],
-							leadingUnderscore: 'require',
-							format: ['strictCamelCase']
-						},
-						{
-							selector: 'classProperty',
-							modifiers: ['public'],
-							leadingUnderscore: 'forbid',
-							filter: {
-								regex: '^(_id)$',
-								match: false
-							},
-							format: ['strictCamelCase']
-						},
-						{
-							selector: 'classMethod',
-							filter: {
-								regex: '^(toJSON)$',
-								match: false
-							},
-							format: ['strictCamelCase']
-						}
-					]
+					"@typescript-eslint/no-unnecessary-condition": ["error", { allowConstantLoopConditions: 'only-allowed-literals' } ]
+				}
+			},
+			{
+				files: ['**/*.{js,mjs,cjs,ts,mts}'],
+				rules: {
+					'@typescript-eslint/naming-convention': createNamingConventions(false),
+				}
+			},
+			{
+				files: ['**/*.{jsx,tsx}'],
+				rules: {
+					'@typescript-eslint/naming-convention': createNamingConventions(true),
+          'react/jsx-uses-react': 'error',
+          'react/jsx-uses-vars': 'error'
 				}
 			}
 		] as Linter.Config
