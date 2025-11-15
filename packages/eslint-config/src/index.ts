@@ -9,13 +9,13 @@ import type { Linter } from 'eslint';
 
 const compat = new FlatCompat({});
 
-function createNamingConventions(allowPascalFn: boolean) {
+function createNamingConventions(isJsx: boolean) {
 	return [
 		'error',
 		{
 			"selector": ["function"],
 			"modifiers": ["exported"],
-			"format": allowPascalFn ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"]
+			"format": isJsx ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"]
 		},
 		{
 			"selector": ["variable"],
@@ -50,7 +50,7 @@ function createNamingConventions(allowPascalFn: boolean) {
 			"selector": ["variable"],
 			"modifiers": ["global"],
 			"types": ["function"],
-			"format": allowPascalFn ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"],
+			"format": isJsx ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"],
 			"filter": {
 				"regex": "^_$",
 				"match": false
@@ -87,7 +87,7 @@ function createNamingConventions(allowPascalFn: boolean) {
 		},
 		{
 			"selector": "variable",
-			"format": ["strictCamelCase"],
+			"format": isJsx ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"],
 			"filter": {
 				"regex": "^_(id)?$",
 				"match": false
