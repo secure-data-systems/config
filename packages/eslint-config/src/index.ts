@@ -61,7 +61,7 @@ function createNamingConventions(isJsx: boolean) {
 			"modifiers": ["global"],
 			"format": ["StrictPascalCase"],
 			"filter": {
-				"regex": "^_$",
+				"regex": isJsx ? "^_|(metadata)$" : "^_$",
 				"match": false
 			}
 		},
