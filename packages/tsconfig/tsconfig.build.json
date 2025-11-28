@@ -8,10 +8,9 @@
 		"lib": ["ES2022", "DOM"],
 		"module": "nodenext",
 		"moduleResolution": "nodenext",
-		"noImplicitAny": true,
 		"noUncheckedIndexedAccess": true,
 		"resolveJsonModule": true,
-		"strictNullChecks": true,
+		"strict": true,
 		"target": "esnext",
 		"types": ["node"]
 	},
