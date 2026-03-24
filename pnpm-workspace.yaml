@@ -4,7 +4,7 @@ packages:
 catalog:
   tsx:  ^4.20.6
   turbo: ^2.6.1
-  typescript: ^5.9.3
+  typescript: ^6.0.2
 
 catalogs:
   eslint:
@@ -21,4 +21,4 @@ catalogs:
     minimist: ^1.2.8
 
   node:
-    "@types/node": ^24.10.1
+    "@types/node": ^25.5.0
