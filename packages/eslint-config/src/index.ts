@@ -30,7 +30,7 @@ function createNamingConventions(isJsx: boolean) {
 		{
 			"selector": ["variable"],
 			"types": ["array", "boolean", "number", "string"],
-			"modifiers": ["global"],
+			"modifiers": ["global", "const"],
 			"format": ["UPPER_CASE"],
 			"filter": {
 				"regex": "^_$",
@@ -53,15 +53,6 @@ function createNamingConventions(isJsx: boolean) {
 			"format": isJsx ? ["strictCamelCase", "StrictPascalCase"] : ["strictCamelCase"],
 			"filter": {
 				"regex": "^_$",
-				"match": false
-			}
-		},
-		{
-			"selector": ["variable"],
-			"modifiers": ["global"],
-			"format": ["StrictPascalCase"],
-			"filter": {
-				"regex": isJsx ? "^_|(metadata)$" : "^_$",
 				"match": false
 			}
 		},
