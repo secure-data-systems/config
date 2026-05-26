@@ -5,6 +5,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
 import tsParser from '@typescript-eslint/parser';
 import perfectionist from 'eslint-plugin-perfectionist';
+import importPlugin from 'eslint-plugin-import';
 import type { Linter } from 'eslint';
 
 const compat = new FlatCompat({});
@@ -145,7 +146,11 @@ export default {
 			...tseslint.configs.recommended,
 			{
 				files: ['**/*.{js,mjs,cjs,ts,mts,jsx,tsx}'],
+				plugins: {
+					import: importPlugin
+				},
 				rules: {
+					'import/no-duplicates': 'error',
 					'no-debugger': 'warn',
 					'no-empty': ['error', { 'allowEmptyCatch': true }],
 					'no-empty-pattern': ['error', { 'allowObjectPatternsAsParameters': true }],
