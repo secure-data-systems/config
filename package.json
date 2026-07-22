@@ -17,6 +17,7 @@
 		"@types/node": "catalog:node",
 		"tsx": "catalog:",
 		"turbo": "catalog:",
-		"typescript": "catalog:"
+		"typescript": "catalog:",
+		"typescript-native": "catalog:"
 	}
 }

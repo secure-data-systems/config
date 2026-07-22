@@ -32,8 +32,12 @@
 		"build": "node ../../scripts/build.mjs && tsc --project tsconfig.build.json",
 		"deploy": "npm run build && node ../../scripts/publish.mjs"
 	},
+	"devDependencies": {
+		"typescript": "catalog:"
+	},
 	"dependencies": {
 		"@eslint/eslintrc": "catalog:eslint",
+		"@eslint/js": "catalog:eslint",
 		"@stylistic/eslint-plugin": "catalog:eslint",
 		"@secure-data-systems/tsconfig": "workspace:^",
 		"eslint": "catalog:eslint",
