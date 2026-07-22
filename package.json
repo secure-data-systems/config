@@ -15,9 +15,9 @@
 	},
 	"devDependencies": {
 		"@types/node": "catalog:node",
-		"@typescript/native": "catalog:",
 		"tsx": "catalog:",
 		"turbo": "catalog:",
-		"typescript": "catalog:"
+		"typescript": "catalog:",
+		"typescript-native": "catalog:"
 	}
 }
