@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@eslint/eslintrc": "catalog:eslint",
+		"@eslint/js": "catalog:eslint",
 		"@stylistic/eslint-plugin": "catalog:eslint",
 		"@secure-data-systems/tsconfig": "workspace:^",
 		"eslint": "catalog:eslint",
